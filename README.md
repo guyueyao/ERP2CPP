@@ -3,12 +3,13 @@ Python implementation for converting 360° ERP format image/video to CPP format.
 
 The code was adapted from the C++ version of CPP-PSNR at https://github.com/I2-Multimedia-Lab/360-video-experimental-platform/blob/master/cpp-psnr/cpppsnr_metric.cpp
 
-I replace the for-loop with vectorize operation to speed up convertion, but the readability of the code may be awful.
+I replace the for-loop with vectorize operation to speed up convertion, but the readability of the code may become awful.
 
 ## Requirements
 The only dependency of this code is Numpy.
 
 ## Usage:
+The input should be ERP image of (H,W,C) or video of (T,H,W,C) in Numpy array.
 ```
 from erp_cpp import ERP2CPP
 import skimage.io
